@@ -19,4 +19,5 @@
 
 **Outputs**:
 - `COH_Pred` *(kPa)*, `PHI_Pred` *(degrees)*
+- *Mohr circle*
 
