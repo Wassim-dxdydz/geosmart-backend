@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", get_random_secret_key())
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
 # Allow your Render domain + local dev
-ALLOWED_HOSTS = ["ml-webapp-utr5.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = [".railway.app", "ml-webapp-utr5.onrender.com", "localhost", "127.0.0.1"]
 CSRF_TRUSTED_ORIGINS = ["https://ml-webapp-utr5.onrender.com"]
 
 # Application definition
@@ -43,9 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'trainer',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -141,3 +143,8 @@ import os
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Allow Next.js frontend in development
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
