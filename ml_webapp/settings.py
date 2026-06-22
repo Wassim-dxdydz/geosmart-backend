@@ -31,7 +31,7 @@ DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
 # Allow your Render domain + local dev
 ALLOWED_HOSTS = ["geosmart-backend-f0x8.onrender.com", "ml-webapp-utr5.onrender.com", "localhost", "127.0.0.1"]
-CSRF_TRUSTED_ORIGINS = ["https://ml-webapp-utr5.onrender.com"]
+CSRF_TRUSTED_ORIGINS = ["https://ml-webapp-utr5.onrender.com","https://geosmart-backend-f0x8.onrender.com"]
 
 # Application definition
 
