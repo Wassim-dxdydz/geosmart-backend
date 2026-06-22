@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", get_random_secret_key())
 DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
 # Allow your Render domain + local dev
-ALLOWED_HOSTS = [".railway.app", "ml-webapp-utr5.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["geosmart-backend-f0x8.onrender.com", "ml-webapp-utr5.onrender.com", "localhost", "127.0.0.1"]
 CSRF_TRUSTED_ORIGINS = ["https://ml-webapp-utr5.onrender.com"]
 
 # Application definition
