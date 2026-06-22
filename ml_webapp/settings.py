@@ -147,4 +147,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Allow Next.js frontend in development
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://geosmart-frontend.vercel.app",
 ]
